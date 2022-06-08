@@ -1,0 +1,145 @@
+/* css reset */
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Kaushan Script', cursive;
+    box-sizing:border-box;
+    
+    
+}
+:root{
+   --navbar-height:59px;
+
+}
+#bg{
+    background-image: url("background.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    
+    
+    height:1300px;
+    width:1350px;
+}
+#logo{
+    margin:10px 15px;
+}
+#logo img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin:3px 5px;
+    z-index: 1;
+}
+
+#navbar {
+    display: flex;
+    background-color:rgb(241, 77, 77);
+    position:fixed;
+    height:10%;
+    width:100%;
+    z-index: 1;
+    opacity:0.8;
+}
+#navbar ul{
+    display:flex;
+}
+#navbar::before{/*adds the effects before*/
+    content:"";
+    background-color:antiquewhite;
+    position:relative;
+    height:100%;
+    width:100;
+    z-index:1;
+    opacity:0.5;
+
+}
+#navbar ul li{
+   /* color:deeppink;*/
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    display: block;
+    color:rgb(25, 33, 36);
+    padding: 10px 20px;
+    border-radius: 10px 100px / 120px;
+    text-decoration:none;
+    z-index:1;
+}
+#navbar ul li a:hover{
+    display: block;
+    color:rgb(17, 62, 4);
+    padding: 10px 22px;
+    border-radius: 10px 100px / 120px;
+    background-color:rgb(240, 246, 249);
+    text-decoration:none;
+    
+}
+footer{
+    position:relative;
+    width:100%;
+    background-color: rgb(235, 74, 74);
+    min-height:100px;
+    padding:20px 50px;
+    display:inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+#social_icon  li {
+    /* color:deeppink;*/
+     list-style: none;
+     font-size: 1.3rem;
+     display:inline-block;
+     margin-right:15px;
+     
+ }
+ /* products- style*/
+ #catalogue{
+    margin:50px;
+    
+    width:200px;
+    height:500px;
+    display:flex;
+    
+    }
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      width: 400px;
+      height:300px;
+      padding: 15px;
+      margin:5px;; 
+      background-color: rgb(122, 168, 233); 
+      float:left;      
+      text-align: center;
+      font-family: arial;
+    }
+    .card img{
+        position: relative;
+        width:85px;
+        height:90px;
+    }
+    
+    .price {
+      color: blue;
+      font-size: 15px;
+    }
+    
+    .card button {
+      border: solid 1px blue;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    
+    .card button:hover {
+      opacity: 0.5;
+    }
+    /*productsstyle*/

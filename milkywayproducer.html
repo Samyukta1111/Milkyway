@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #9b59b6;
+        font-family: "Open Sans", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        width: 400px;
+        max-width: 100%;
+      }
+
+      .header {
+        border-bottom: 1px solid #f0f0f0;
+        background-color: #f7f7f7;
+        padding: 20px 40px;
+      }
+
+      .header h2 {
+        margin: 0;
+      }
+
+      .form {
+        padding: 30px 40px;
+      }
+
+      .form-control {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        position: relative;
+      }
+
+      .form-control label {
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      .form-control input {
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        display: block;
+        font-family: inherit;
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .form-control input:focus {
+        outline: 0;
+        border-color: #777;
+      }
+
+      .form-control.success input {
+        border-color: #2ecc71;
+      }
+
+      .form-control.error input {
+        border-color: #e74c3c;
+      }
+
+      .form-control i {
+        visibility: hidden;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+      }
+
+      .form-control.success i.fa-check-circle {
+        color: #2ecc71;
+        visibility: visible;
+      }
+
+      .form-control.error i.fa-exclamation-circle {
+        color: #e74c3c;
+        visibility: visible;
+      }
+
+      .form-control small {
+        color: #e74c3c;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+      }
+
+      .form-control.error small {
+        visibility: visible;
+      }
+
+      .form button {
+        background-color: #8e44ad;
+        border: 2px solid #8e44ad;
+        border-radius: 4px;
+        color: #fff;
+        display: block;
+        font-family: inherit;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+
+
+      .floating-text {
+        background-color: #001f61;
+        border-radius: 10px 10px 0 0;
+        color: #fff;
+        font-family: "Muli";
+        padding: 7px 15px;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 998;
+      }
+
+      .floating-text a {
+        color: #ff7500;
+        text-decoration: none;
+      }
+
+      @media screen and (max-width: 480px) {
+        .social-panel-container.visible {
+          transform: translateX(0px);
+        }
+      }
+    </style>
+  </head>
+  <body onload="myFunctiononload()" onresize="myFunctiononresize()">
+    <div class="container">
+      <div class="header">
+<p id="head"></p>
+        <h2 id="h1" onmouseover="mouseOver()" onmouseout="mouseOut()">PRODUCER REGISTRATION</h2>
+
+
+      </div>
+      <form id="form" class="form" action="/action_page.php" onsubmit="myFunction()">
+        <div class="form-control">
+          <label for="username">Name</label>
+          <input type="text" placeholder="Harsam" id="name" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" placeholder="Harsam" id="username" /  onkeyup="myFunction()">
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Email</label>
+          <input type="email" placeholder="harshsam@gmail.com" id="email" / onkeydown="myFunctiononkeydown()">
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Password</label>
+          <input type="password" placeholder="Password" id="password" /onfocus="myFunctiononfocus(this)">
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Password check</label>
+          <input type="password" placeholder="Password " id="password2" /onfocus="myFunctiononfocus(this)">
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Gender</label>
+          <div class="Gender">
+            <input type="radio" value="Male" name="gender" checked /> Male
+            <input type="radio" value="Female" name="gender" /> Female
+            <input type="radio" value="Other" name="gender" /> Other
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="username">Qualification</label>
+          <div class="Qualification">
+            <select id="mySelect" onchange="myFunction()">
+              <option value="Course">Qualification</option>
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+              <option value="UG">UG</option>
+              <option value="PG">PG</option>
+              <option value="Uneducated">Uneducated</option>
+            </select>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </div>
+     <p id="demo"></p>
+
+        <div class="form-control">
+          <label for="username">Date of Birth</label>
+          <input type="date" placeholder="15/08/1947" id="date1" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Phone Number</label>
+          <input type="text" placeholder="9486798532" id="number" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <button onclick="myFunction()">Submit</button>
+<p id="onclickk"></p>
+ </form>
+    </div>
+
+
+    <script>
+      const form = document.getElementById("form");
+      const name = document.getElementById("name");
+      const username = document.getElementById("username");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const password2 = document.getElementById("password2");
+      const date1 = document.getElementById("date1");
+      const number = document.getElementById("number");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        checkInputs();
+      });
+
+      function checkInputs() {
+        // trim to remove the whitespaces
+        const nameValue = name.value.trim();
+        const usernameValue = username.value.trim();
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
+        const password2Value = password2.value.trim();
+        const dateValue = date1.value.trim();
+        const numberValue = number.value.trim();
+
+        if (nameValue === "") {
+          setErrorFor(name, "Name cannot be blank");
+        } else {
+          setSuccessFor(name);
+        }
+        if (usernameValue === "") {
+          setErrorFor(username, "Username cannot be blank");
+        } else {
+          setSuccessFor(username);
+        }
+
+        if (emailValue === "") {
+          setErrorFor(email, "Email cannot be blank");
+        } else if (!isEmail(emailValue)) {
+          setErrorFor(email, "Not a valid email");
+        } else {
+          setSuccessFor(email);
+        }
+
+        if (passwordValue === "") {
+          setErrorFor(password, "Password cannot be blank");
+        } else if (passwordValue.length < 8) {
+          setErrorFor(password, "Minimum 8 characters required");
+        } else {
+          setSuccessFor(password);
+        }
+
+        if (password2Value === "") {
+          setErrorFor(password2, "Password2 cannot be blank");
+        } else if (passwordValue !== password2Value) {
+          setErrorFor(password2, "Passwords does not match");
+        } else if (password2Value.length < 8) {
+          setErrorFor(password2, "Minimum 8 characters required");
+        } else {
+          setSuccessFor(password2);
+        }
+      }
+      if (numberValue === "") {
+        setErrorFor(number, "Number cannot be blank");
+      } else if (numberValue.length < 10) {
+        setErrorFor(number, "Minimum 10 digits required");
+      } else {
+        setSuccessFor(number);
+      }
+      if (dateValue === "") {
+        setErrorFor(date1, "Date cannot be blank");
+      } else {
+        setSuccessFor(date1);
+      }
+
+      function setErrorFor(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector("small");
+        formControl.className = "form-control error";
+        small.innerText = message;
+      }
+
+      function setSuccessFor(input) {
+        const formControl = input.parentElement;
+        formControl.className = "form-control success";
+      }
+
+      function isEmail(email) {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+          email
+        );
+      }
+function myFunction() {
+  alert("The form was submitted");
+}
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+function myFunctiononfocus(x) {
+  x.style.background = "green";
+}
+function myFunctiononload() {
+  alert("Welcome to Registration Page");
+}
+function myFunctiononresize() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  var txt = "Window size: width=" + w + ", height=" + h;
+  document.getElementById("head").innerHTML = txt;
+}
+function myFunction() {
+  document.getElementById("onclickk").innerHTML = "submitted";
+}
+function mouseOver() {
+  document.getElementById("h1").style.color = "red";
+}
+
+function mouseOut() {
+  document.getElementById("h1").style.color = "black";
+}
+function myFunctiononkeydown() {
+  document.getElementById("email").style.backgroundColor = "red";
+}
+function myFunction() {
+  var x = document.getElementById("username");
+  x.value = x.value.toUpperCase();
+}
+    </script>
+  </body>
+</html>

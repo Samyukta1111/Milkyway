@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  <script> 
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+      });
+    });
+    </script>
+    
+
+     <style>
+    
+    .header {
+       padding: 5px;
+       text-align: center;
+       background: #e05e5e;
+       color: rgb(10, 9, 9);
+       font-size: 30px;
+      }
+
+      #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #f0938c;
+  border: solid 1px #e09090;
+       }
+
+        #panel {
+         padding: 50px;
+          display: none;
+         }
+ 
+    .card {
+     
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0.2);
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+    
+    .price {
+      color: rgb(10, 10, 10);
+      font-size: 20px;
+    }
+    
+    .card button{
+      border: none;
+      outline: 0;
+      padding: 10px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    
+    .card button:hover {
+      opacity: 0.7;
+    }
+
+   .child1, .child2, .child3, .child4, .child5 {
+    width: 70%;
+    float: left;
+    padding: 100px;
+    border: 2px solid red;
+    
+  }  
+
+  
+
+    </style>
+  </head>
+  
+ <div class="header">
+  <div id="flip">DAIRY PRODUCTS</div>
+<div id="panel">FRESH FROM FARM</div>
+</div>
+
+  <!--div class="header">
+    <button><h1>PRODUCTS</h1></button>
+    <p>Fresh from farm</p>
+  </div-->
+
+    <div class="card">
+
+     <div class="child1"> 
+       
+    <img src= "paneer.jpg" style="width:50%">
+    <h1>PANEER</h1>
+    <p class="price">Rs.150</p>
+    <p> Paneer is an Indian cheese that's made from curdled milk and some sort of fruit or vegetable acid like lemon juice. </p>
+    <p><button>Add to Cart</button></p> 
+   </div>
+    
+  <div class="child2">
+    <img src= "curd.jpg" style="width:50%">
+    <h1>CURD</h1>
+    <p class="price">Rs.50</p>
+    <p>Curd is a traditional yogurt or fermented milk product, originating from the Indian subcontinent, usually prepared from cow's milk, and sometimes buffalo milk, or goat milk</p>
+    <p><button>Add to Cart</button></p> 
+   </div>
+  
+   <div class="child3">
+    <img src= "milk.jpg" style="width:50%">
+    <h1>MILK</h1>
+    <p class="price">Rs.65</p>
+    <p>Milk is a good source of many essential nutrients, including calcium, protein, and vitamin D</p>
+    <p><button>Add to Cart</button></p> 
+   </div>
+
+   <div class="child4">
+    <img src= "icecream.jpg" style="width:50%">
+    <h1>ICE CREAM</h1>
+    <p class="price">Rs.100</p>
